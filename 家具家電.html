@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家具家電表格</title>
+    <style>
+        table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 10px; /* 表格外圍的圓角 */
+            border-spacing: 0; /* 防止邊框間距 */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        /* 圓角處理 */
+        th:first-child {
+            border-top-left-radius: 10px;
+        }
+        th:last-child {
+            border-top-right-radius: 10px;
+        }
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 10px;
+        }
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+		
+		 /* 列印樣式 */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact; /* 保證列印時顯示顏色 */
+            }
+
+            th {
+                background-color: #f4f4f4; /* 標題行的背景顏色 */
+            }
+        }
+    </style>
+</head>
+<body>
+   <h2>家具家電表格</h2>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>類別</th>
+                <th>品項</th>
+                <th>品牌/型號</th>
+                <th>尺寸 (cm)</th>
+                <th>顏色</th>
+                <th>位置</th>
+                <th>備註</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 動態生成的表格內容將放在這裡 -->
+        </tbody>
+    </table>
+
+    <script>
+        // 假設數據來自外部 JSON 檔案
+       const data = [
+    {"category": "家具", "item": "沙發", "brand": "IKEA / XXX", "size": "200x80x75", "color": "灰色", "location": "客廳", "note": "L型"},
+    {"category": "家具", "item": "床墊", "brand": "IKEA / XXX", "size": "200x80x75", "color": "灰色", "location": "客廳", "note": "L型"},
+    {"category": "家具", "item": "床架", "brand": "IKEA / XXX", "size": "200x80x75", "color": "灰色", "location": "客廳", "note": "L型"},
+    {"category": "家電", "item": "冰箱", "brand": "Panasonic / AAA", "size": "85x70x180", "color": "銀色", "location": "廚房", "note": "雙門"},
+    {"category": "家電", "item": "洗衣機", "brand": "LG / BBB", "size": "60x60x85", "color": "白色", "location": "陽台", "note": "滾筒式"},
+    {"category": "家電", "item": "電視", "brand": "Sony / CCC", "size": "55吋", "color": "黑色", "location": "客廳", "note": "需壁掛"},
+    {"category": "家電", "item": "熱水器", "brand": "Sony / CCC", "size": "55吋", "color": "黑色", "location": "客廳", "note": "需壁掛"} // 修正錯誤：這一行應該以逗號結尾
+];
+
+        // 動態生成表格內容
+        const tableBody = document.querySelector("#data-table tbody");
+        data.forEach(item => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${item.category}</td>
+                <td>${item.item}</td>
+                <td>${item.brand}</td>
+                <td>${item.size}</td>
+                <td>${item.color}</td>
+                <td>${item.location}</td>
+                <td>${item.note}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
