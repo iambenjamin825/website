@@ -38,20 +38,22 @@
     {
         "item": "冰箱",
         "brand": "Panasonic / AAA",
-        "size": "85x70x180",
+        "size": "深66cm
+寬59.5cm
+高185cm",
         "color": "銀色",
         "location": "廚房",
         "note": "雙門",
-        "price": 15000
+        "price": 24000
     },
     {
         "item": "洗衣機",
-        "brand": "LG / BBB",
-        "size": "60x60x85",
+        "brand": "LG / WD-S15TBD",
+        "size": " ",
         "color": "白色",
         "location": "陽台",
-        "note": "滾筒式",
-        "price": 12000
+        "note": "洗脫烘",
+        "price": 36000
     },
     {
         "item": "電視",
@@ -60,15 +62,15 @@
         "color": "黑色",
         "location": "客廳",
         "note": "需壁掛",
-        "price": 30000
+        "price": 15000
     },
     {
         "item": "熱水器",
-        "brand": "Sony / CCC",
-        "size": "55吋",
-        "color": "黑色",
-        "location": "客廳",
-        "note": "需壁掛",
-        "price": 25000
+        "brand": "Rinnai / RUA-C1600WF",
+        "size": " ",
+        "color": "白色",
+        "location": "陽台",
+        "note": "16L/min",
+        "price": 16000
     }
 ]
