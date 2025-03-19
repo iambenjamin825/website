@@ -1,0 +1,74 @@
+[
+    {
+        "item": "沙發",
+        "brand": "IKEA / XXX",
+        "size": "200x80x75",
+        "color": "灰色",
+        "location": "客廳",
+        "note": "",
+        "price": 10000
+    },
+    {
+        "item": "冷氣",
+        "brand": "IKEA / XXX",
+        "size": "200x80x75",
+        "color": "灰色",
+        "location": "主臥",
+        "note": "",
+        "price": 20000
+    },
+    {
+        "item": "床墊",
+        "brand": "IKEA / XXX",
+        "size": "200x80x75",
+        "color": "灰色",
+        "location": "主臥",
+        "note": "",
+        "price": 8000
+    },
+    {
+        "item": "床架",
+        "brand": "IKEA / XXX",
+        "size": "200x80x75",
+        "color": "灰色",
+        "location": "主臥",
+        "note": "",
+        "price": 5000
+    },
+    {
+        "item": "冰箱",
+        "brand": "Panasonic / AAA",
+        "size": "85x70x180",
+        "color": "銀色",
+        "location": "廚房",
+        "note": "雙門",
+        "price": 15000
+    },
+    {
+        "item": "洗衣機",
+        "brand": "LG / BBB",
+        "size": "60x60x85",
+        "color": "白色",
+        "location": "陽台",
+        "note": "滾筒式",
+        "price": 12000
+    },
+    {
+        "item": "電視",
+        "brand": "JVC / 65G2",
+        "size": "65吋",
+        "color": "黑色",
+        "location": "客廳",
+        "note": "需壁掛",
+        "price": 30000
+    },
+    {
+        "item": "熱水器",
+        "brand": "Sony / CCC",
+        "size": "55吋",
+        "color": "黑色",
+        "location": "客廳",
+        "note": "需壁掛",
+        "price": 25000
+    }
+]
