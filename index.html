@@ -32,8 +32,8 @@
         tr:last-child td:last-child {
             border-bottom-right-radius: 10px;
         }
-		
-		 /* 列印樣式 */
+
+         /* 列印樣式 */
         @media print {
             body {
                 -webkit-print-color-adjust: exact; /* 保證列印時顯示顏色 */
@@ -71,40 +71,34 @@
     </table>
 
     <script>
-        // 假設數據來自外部 JSON 檔案
-        const data = [
-            {"item": "沙發", "brand": "IKEA / XXX", "size": "200x80x75", "color": "灰色", "location": "客廳", "note": "", "price": 10000},
-            {"item": "冷氣", "brand": "IKEA / XXX", "size": "200x80x75", "color": "灰色", "location": "主臥", "note": "", "price": 20000},
-            {"item": "床墊", "brand": "IKEA / XXX", "size": "200x80x75", "color": "灰色", "location": "主臥", "note": "", "price": 8000},
-            {"item": "床架", "brand": "IKEA / XXX", "size": "200x80x75", "color": "灰色", "location": "主臥", "note": "", "price": 5000},
-            {"item": "冰箱", "brand": "Panasonic / AAA", "size": "85x70x180", "color": "銀色", "location": "廚房", "note": "雙門", "price": 15000},
-            {"item": "洗衣機", "brand": "LG / BBB", "size": "60x60x85", "color": "白色", "location": "陽台", "note": "滾筒式", "price": 12000},
-            {"item": "電視", "brand": "JVC / 65G2", "size": "65吋", "color": "黑色", "location": "客廳", "note": "需壁掛", "price": 15,000},
-            {"item": "熱水器", "brand": "Sony / CCC", "size": "55吋", "color": "黑色", "location": "客廳", "note": "需壁掛", "price": 25000}
-        ];
+        // 使用 fetch 來讀取外部的 JSON 檔案
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector("#data-table tbody");
+                let totalPrice = 0;
 
-        // 動態生成表格內容
-        const tableBody = document.querySelector("#data-table tbody");
-        let totalPrice = 0;
+                // 動態生成表格內容
+                data.forEach(item => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${item.item}</td>
+                        <td>${item.brand}</td>
+                        <td>${item.size}</td>
+                        <td>${item.color}</td>
+                        <td>${item.location}</td>
+                        <td>${item.note}</td>
+                        <td>NT$${item.price.toLocaleString()}</td> <!-- 顯示帶千分位的價格 -->
+                    `;
+                    tableBody.appendChild(row);
+                    totalPrice += item.price; // 累加價格
+                });
 
-        data.forEach(item => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${item.item}</td>
-                <td>${item.brand}</td>
-                <td>${item.size}</td>
-                <td>${item.color}</td>
-                <td>${item.location}</td>
-                <td>${item.note}</td>
-                <td>NT$${item.price.toLocaleString()}</td> <!-- 顯示價格 -->
-            `;
-            tableBody.appendChild(row);
-            totalPrice += item.price; // 累加價格
-        });
-
-        // 顯示合計金額
-        const totalPriceElement = document.getElementById("total-price");
-        totalPriceElement.textContent = `NT$${totalPrice.toLocaleString()}`;
+                // 顯示合計金額，並顯示千分位
+                const totalPriceElement = document.getElementById("total-price");
+                totalPriceElement.textContent = `NT$${totalPrice.toLocaleString()}`;
+            })
+            .catch(error => console.error('讀取 JSON 檔案失敗:', error));
     </script>
 </body>
 </html>
