@@ -7,38 +7,29 @@
         "location": "客廳",
         "note": "",
         "price": 10000
-    },
-    {
-        "item": "冷氣",
-        "brand": "IKEA / XXX",
-        "size": "200x80x75",
-        "color": "灰色",
-        "location": "主臥",
-        "note": "",
-        "price": 20000
-    },
+    },   
     {
         "item": "床墊",
-        "brand": "IKEA / XXX",
-        "size": "200x80x75",
+        "brand": "卡蜜爾名床 / 硬式獨立筒",
+        "size": "152x188x31cm",
         "color": "灰色",
         "location": "主臥",
         "note": "",
-        "price": 8000
+        "price": 30000
     },
     {
         "item": "床架",
-        "brand": "IKEA / XXX",
-        "size": "200x80x75",
-        "color": "灰色",
+        "brand": "蝦皮",
+        "size": "152×188×15cm",
+        "color": "原木色",
         "location": "主臥",
         "note": "",
-        "price": 5000
+        "price": 4000
     },
     {
         "item": "冰箱",
         "brand": "SAMPO / SR-C35GD",
-        "size": "深66cm寬59.5cm高185cm",
+        "size": "59.5x185cm 深66cm",
         "color": "銀色",
         "location": "廚房",
         "note": "雙門",
